@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: grey;
+}
+
+nav{
+    text-align: center;
+    background-color: #444;
+    padding: 10px;
+}
+nav ul{
+    margin:0;
+}
+nav li{
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+main{
+    padding: 10px;
+}
+
+
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    Padding: 10px;
+}
