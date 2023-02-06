@@ -1,0 +1,35 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    border-top: 2px solid black;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+
+nav h1 {
+    font-size: 36px;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin-right: 50px;
+    text-decoration: none;
+    color: rgb(5, 194, 5);
+}
