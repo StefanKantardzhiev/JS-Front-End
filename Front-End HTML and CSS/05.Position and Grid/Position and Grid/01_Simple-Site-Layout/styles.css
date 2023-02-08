@@ -1,0 +1,66 @@
+main {}
+
+body {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas:
+        " head head head head"
+        "side main main main"
+        "side main main main"
+        "foot foot foot foot"
+
+}
+
+header {
+    grid-area: head;
+    border-radius: 3px;
+    background: rgb(181, 216, 255);
+    padding: 5px 10px;
+
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+aside {
+    grid-area: side;
+    border-radius: 3px;
+    background: rgb(181, 216, 255);
+    padding: 5px 10px;
+
+}
+
+aside ul {
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+}
+
+aside ul li a {
+    display: block;
+    padding: 5px 0px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    border-radius: 3px;
+    background: rgb(181, 216, 255);
+    padding: 5px 10px;
+}
+
+footer {
+    height: 20px;
+    grid-area: foot;
+    border-radius: 3px;
+    background: rgb(181, 216, 255);
+    padding: 5px 10px;
+}
