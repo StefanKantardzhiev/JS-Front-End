@@ -1,0 +1,25 @@
+html {}
+
+html {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+section {
+    padding-top: 33vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 70vw;
+    vertical-align: middle;
+}
+
+article {
+    width: 20%;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
