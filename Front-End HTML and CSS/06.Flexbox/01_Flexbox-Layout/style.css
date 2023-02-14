@@ -1,0 +1,43 @@
+body {
+    background-color: #EEE;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: start;
+}
+
+header,
+footer {
+    box-shadow: 0 0 5px 1px grey;
+    padding: 2rem;
+    background-color: #FFF;
+    border-radius: 0.4rem;
+    color: #000;
+    flex-basis: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+body main {
+    box-shadow: 0 0 5px 1px grey;
+    padding: 2rem;
+    background-color: #FFF;
+    border-radius: 0.4rem;
+    color: #000;
+    flex: 8 1 40rem;
+    padding-bottom: 20%;
+    margin-right: 20px;
+}
+
+body aside {
+    box-shadow: 0 0 5px 1px grey;
+    padding: 2rem;
+    background-color: #FFF;
+    border-radius: 0.4rem;
+    color: #000;
+    flex: 2 1 20rem;
+}
