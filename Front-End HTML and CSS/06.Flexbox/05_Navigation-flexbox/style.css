@@ -1,0 +1,29 @@
+body{
+    margin:50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+header {
+    border-bottom: 2px solid rgb(0,0,0);
+    display: flex;
+}
+
+h1 {
+    width: 70%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+
+a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: rgb(0, 153, 0);
+}
+
+p{
+    text-align: left;
+}
