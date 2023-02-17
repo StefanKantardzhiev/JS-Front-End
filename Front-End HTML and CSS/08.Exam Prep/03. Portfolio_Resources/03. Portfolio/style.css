@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+:root {
+    --light-grey: #efefef;
+    --dark-grey: #909090;
+    --black: #222222;
+}
+
+/*Global Styles */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--black)
+}
+
+.page-section {
+    max-width: 1880px;
+    margin: 24px auto;
+    background-color: var(--light-grey);
+    height: calc(100vh - 30vh);
+    display: flex;
+    padding: 3rem 6rem;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.page-section .title {
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 2.5rem;
+}
+
+.page-section .desc {
+    line-height: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.page-section .divider-vertical {
+    height: 6rem;
+    width: 2px;
+    background-color: var(--black);
+}
+
+.page-section .info {
+    flex: 0 0 50%;
+}
+
+.page-section img {
+    flex: 0 1 35%;
+}
+
+.divider-horizontal {
+    margin-top: 25px;
+    float: left;
+    height: 2px;
+    width: 3rem;
+    background-color: var(--black);
+}
+
+/* Hero */
+
+#hero.page-section {
+    position: relative;
+
+}
+
+#hero .navigation {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+#hero .hero-img {
+    position: absolute;
+    width: 50%;
+    bottom: 0px;
+    right: 5rem;
+}
+
+
+
+/*Camera*/
+
+#camera .page-section {
+    /* max-width: 1880px; */
+}
+
+#camera .info .title {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+#camera .socials {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+#camera .socials .social {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--dark-grey);
+    color: white;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.socials .social i {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Thumbnail */
+#thumbnail.page-section {
+    background-image: url(./images/thumb-1.jpeg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Featured  */
+#featured .info .desc {
+    width: 46%;
+}
+
+#featured img {
+    margin: 20px;
+    width: 900px;
+    height: 500px;
+}
+
+/* Gallery */
+#gallery .list {
+    display: grid;
+    /* align-items: center; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+}
+
+/* #gallery .list .picture{
+    transition: transform 300ms ease-in-out;
+
+} */
+
+#gallery .list .picture:hover {
+    transform: scale(1.3)
+}
+
+/* Contact */
+
+#contact{
+    display: block;
+}
+
+
+#contact .info{
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#contact .form {
+    max-width: 70%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "email subject"
+        "msg msg"
+        "btn btn";
+}
+
+#contact .form input,
+#contact .form .msg {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--black);
+    padding: 0.25rem;
+}
+
+#contact .msg {
+    resize: none;
+    grid-area: msg;
+}
+
+#contact .btn {
+    font-weight: bold;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1 solid var(--black);
+    background-color: var(--black);
+    color: white;
+    grid-area: btn;
+}
+
+#contact .email {
+    grid-area: email;
+}
+
+footer{
+    font-weight: bold;
+    margin-top: 16rem;
+    width: 100%;
+    text-align: center;
+}
