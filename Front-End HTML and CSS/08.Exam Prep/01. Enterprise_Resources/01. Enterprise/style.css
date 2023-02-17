@@ -1,0 +1,63 @@
+/* lightsilver - rgb(238, 237, 237);
+    darksilver - #8a939a
+     */
+body {
+    font-family: Helvetica, sans-serif;
+    color:#273240;
+}
+
+.enterprise{
+    border-radius: 6px;
+    background-color: #f6f8f9;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin:60px auto;
+    max-width: 960px;
+}
+
+.enterprise .info{
+    padding: 48px 0;
+    width: 40%;
+}
+
+
+.enterprise .subtitle{
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: normal;
+}
+
+.enterprise .title{
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.enterprise .desc{
+    color:#8a939a;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+
+
+.btn-contact {
+    background-color: #786eff;
+    border: 1px solid #786eff;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+}
+
+.btn-learn {
+    color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+}
+
+img {
+    width: 30%;
+}
