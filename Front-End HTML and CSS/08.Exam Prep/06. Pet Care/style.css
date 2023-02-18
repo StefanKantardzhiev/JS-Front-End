@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html{
+    max-width: 1920px;
+    max-height: 1080px;
+}
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: Open Sans;
+}
+
+header {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header nav {}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hero */
+
+.hero-title {
+    padding-top: 80px;
+    width: 400px;
+    color: white;
+    position: absolute;
+    top: 20rem;
+    left: 20rem;
+}
+
+img#dog {
+    width: 1080px;
+    left: 40rem;
+    position: absolute;
+    top: 15rem;
+
+}
+
+
+.hero-title h1 {
+    font-weight: lighter;
+    line-height: 50px;
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+h2#pets {
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.hero-btn {
+    background-color: white;
+    border: 1px white;
+    color: rgb(255, 115, 0);
+    margin: 50px 0px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 3cm;
+}
+
+/* Service */
+
+article.service {
+    padding: 10rem;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+article.service p {
+    color: 7b7b7b;
+}
+
+
+section.services {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    text-align: center;
+}
+
+section.services-cards {
+    padding: 0 50px 50px;
+    margin: 5px;
+    box-shadow: 5px 10px 10px 7b7b7b;
+    border-radius: 10px;
+    border: 1px solid black;
+    line-height: 30px;
+}
+
+.card h2 {
+    padding: 20px;
+}
+
+#dog-service {
+    top: 120px;
+    left: 120px;
+    position: relative;
+}
+
+#animals {
+    margin: auto;
+}
+
+
+
+/* About */
+section.about {
+    margin-top: 30vh;
+    display: flex;
+    justify-content: center;
+}
+
+article#about {
+    width: 30%;
+    padding-top: 10rem;
+}
+
+article#about h1 {
+    font-size: 50px;
+    font-weight: normal;
+}
+
+article#about h2 {
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+article#about p {
+    width: 95%;
+    padding: 20px 0px 0px 0px;
+}
+
+
+img#cat {
+    width: 40%;
+    float: left;
+    padding-right: 200px;
+}
+
+button.about-btn {
+    border: 1px solid #c71400;
+    padding: 10px 50px;
+    margin: 50px 0px;
+    border-radius: 3cm;
+    background: linear-gradient(to right, #f04430, #ee5611);
+    color: white;
+}
+
+
+/* Contact Us */
+
+.aboutUs {}
+
+article#aboutUs {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: -26rem;
+    text-align: center;
+    color: white;
+}
+
+
+article#aboutUs h1 {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+article#aboutUs p {
+    font-size: 27px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+article#aboutUs p a {
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+}
+
+.aboutUs-btn {
+    background-color: white;
+    color: #ee5611;
+    border: 1px transparent;
+    border-radius: 3cm;
+    padding: 10px 50px;
+    margin: 50px 0px;
+}
+
+.footer {
+    margin-top: -200px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-contact {
+    columns: #7b7b7b;
+    line-height: 30px;
+}
