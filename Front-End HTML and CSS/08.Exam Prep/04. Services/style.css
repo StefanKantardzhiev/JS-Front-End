@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+:root {
+    --light-green: #a3c437;
+    --grey: #f7f7f7;
+    --black: #222222;
+}
+
+/*Global Styles */
+
+body {
+    font-family: 'Poppins';
+}
+
+
+header h1 {
+    font-size: 48px;
+}
+
+a#service {
+    color: var(--light-green);
+}
+
+header {
+    margin: 5rem;
+    text-align: center;
+}
+
+main {
+    width: 1880px;
+    margin: auto;
+    display: flex;
+    gap:4rem;
+
+}
+
+.card {
+    background-color: var(--grey);
+    margin: auto;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card article {
+    padding: 30px;
+    width: 70%;
+    line-height: 50px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card .btn {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #a3c437;
+    background-color: #a3c437;
+    border-radius: 30px;
+    padding: 0px 50px;
+}
