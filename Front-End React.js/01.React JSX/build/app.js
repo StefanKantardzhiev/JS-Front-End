@@ -22,7 +22,7 @@ var headerElement = React.createElement(
     React.createElement(
         "header",
         { className: "header-container" },
-        React.createElement(Heading, { title: "React" }),
+        React.createElement(Heading, { title: "ReactJS" }),
         React.createElement(
             "h2",
             null,
@@ -37,8 +37,7 @@ var headerElement = React.createElement(
     React.createElement(
         "button",
         null,
-        "Click"
-    )
+        "Click"    )
 );
 
 root.render(headerElement);
