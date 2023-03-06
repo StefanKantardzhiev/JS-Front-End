@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+html {
+    width: 1920px;
+}
+body{
+    font-family: Poppins;
+}
+.hero {
+    width: 1920PX;
+    height: 750px;
+    background-image: url(/images/landing-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -13rem;
+}
+
+
+header {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    
+}
+
+header nav ul li {
+    
+    display: inline-block;
+    padding: 10px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+
+header nav {
+    padding-bottom: 20px;
+}
+
+header .logo {
+    padding: 20px;
+}
+
+
+
+#hero-article {
+    position: absolute;
+    top: 12rem;
+    left: 24rem;
+    margin: 50px;
+    width: 30%;
+
+}
+
+#hero-article h1 {
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+#hero-article p {
+    padding: 20px 0 20px 0;
+}
+
+
+.explore-btn {
+    border: none;
+    padding: 5px 30px 5px 30px;
+    color: white;
+    background-color: #370511;
+    border-radius: 2cm;
+    margin: 10px 0 0;
+}
+
+.explore-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Main */
+main h1 {
+    padding: 50px 0px 20px;
+    text-align: center;
+}
+
+main h2 {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    padding: 50px;
+    width: 70%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+}
+
+.card {
+    margin-bottom: 30px;
+    border: 1px transparen;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+}
+
+.card button a{
+    text-decoration: none;
+    color:black
+}
+
+.cards img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+}
+
+.card h2 {
+    padding: 20px 0 0 0;
+    font-weight: bold;
+}
+
+.card p {
+    text-align: left;
+    padding: 20px;
+}
+
+.card button {
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2cm;
+    padding: 10px 40px 10px 40px;
+}
+
+/* Footer */
+
+footer {
+    background-color: black;
+    margin: auto;
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+    color:white;
+}
+
+footer h1{
+    padding:70px
+}
+
+
+footer nav ul {
+    line-height: 40px;
+    list-style-type: none;
+}
+
+.footer{
+    padding: 30px;
+}
+
+.footer li{
+    font-size: larger;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+footer nav ul li a{
+    text-decoration: none;
+    color:white;
+}
