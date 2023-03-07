@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       <Header />
-      <main class="main">
-    
+      <main className="main">
+
 
 
       </main>
