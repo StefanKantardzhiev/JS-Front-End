@@ -6,6 +6,11 @@ function App() {
   return (
     <>
       <Header />
+      <main class="main">
+    
+
+
+      </main>
       <Footer />
     </>
   );
