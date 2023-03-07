@@ -1,4 +1,4 @@
-export const UserLisrt = () => {
+export const UserList = () => {
     return (<section className="card users-container">
 
 
