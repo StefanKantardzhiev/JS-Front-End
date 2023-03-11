@@ -150,7 +150,7 @@ export const UserList = ({
                     </tbody>
                 </table>
             </div>
-            <button class="btn-add btn" onClick={onUserAddClick}>Add new user</button>
+            <button className="btn-add btn" onClick={onUserAddClick}>Add new user</button>
         </>
     );
 };

@@ -22,7 +22,7 @@ function App() {
 
 
     const onUserCreateSubmit = (e) => {
-
+        e.preventDefault();
     }
 
     return (
