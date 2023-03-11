@@ -7,6 +7,7 @@ import { UserDetails } from "./UserDetails";
 import { UserCreate } from './UserCreate';
 export const UserList = ({
     users,
+    onUserCreateSubmit
 }) => {
     const [selectedUser, setSelectedUser] = useState(null);
     const [showAddUser, setShowAddUser] = useState(false);
@@ -18,6 +19,7 @@ export const UserList = ({
 
     const onClose = () => {
         setSelectedUser(null);
+        setShowAddUser(false)
     };
 
     const onUserAddClick = () => {
@@ -27,7 +29,7 @@ export const UserList = ({
     return (
         <>
             {selectedUser && <UserDetails {...selectedUser} onClose={onClose} />}
-            <UserCreate />
+            {showAddUser && <UserCreate onClose={onClose} onUserCreateSubmit={onUserCreateSubmit} />}
             <div className="table-wrapper">
                 {/* <div className="loading-shade">
                 <div className="spinner"></div>

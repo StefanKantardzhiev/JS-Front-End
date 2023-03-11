@@ -20,6 +20,11 @@ function App() {
             });
     }, []);
 
+
+    const onUserCreateSubmit = (e) => {
+
+    }
+
     return (
         <>
             <Header />
@@ -28,9 +33,9 @@ function App() {
                 <section className="card users-container">
                     <Search />
 
-                    <UserList users={users} />
-                     
-                    
+                    <UserList users={users} onUserCreateSubmit={onUserCreateSubmit} />
+
+
                 </section>
             </main>
 
