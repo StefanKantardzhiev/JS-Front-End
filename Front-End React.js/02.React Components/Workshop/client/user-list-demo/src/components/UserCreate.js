@@ -7,8 +7,8 @@ export const UserCreate = ({
     imageUrl,
     address,
     createdAt,
+    onUserCreateSubmit,
     onClose,
-    onUserCreateSubmit
 }) => {
     return (
         < div className="overlay" >
