@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { Search } from "./components/Search";
 import './App.css';
 import { UserList } from "./components/UserList";
+import { UserCreate } from './components/UserCreate';
 
 function App() {
     const [users, setUsers] = useState([]);
@@ -28,8 +29,8 @@ function App() {
                     <Search />
 
                     <UserList users={users} />
-
-                    <button class="btn-add btn">Add new user</button>
+                     
+                    
                 </section>
             </main>
 
