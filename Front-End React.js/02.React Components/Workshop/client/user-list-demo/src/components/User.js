@@ -7,7 +7,7 @@ export const User = (
         imageUrl,
         phoneNumber,
         createdAt,
-        onInfoClick,
+        onInfoClick
     }
 ) => {
     return (
