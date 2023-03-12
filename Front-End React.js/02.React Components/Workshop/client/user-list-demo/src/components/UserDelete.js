@@ -1,6 +1,7 @@
-export const UserDelete = (
-{ onClose,
-        onDelete }) => {
+export const UserDelete = ({
+    onDelete,
+    onClose,
+}) => {
     return (
         <div className="overlay">
             <div className="backdrop"></div>
@@ -28,5 +29,5 @@ export const UserDelete = (
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

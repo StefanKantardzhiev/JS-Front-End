@@ -6,5 +6,5 @@ export const Header = () => {
                 <span className="description">User List Demo</span>
             </div>
         </header>
-    )
-}
+    );
+};

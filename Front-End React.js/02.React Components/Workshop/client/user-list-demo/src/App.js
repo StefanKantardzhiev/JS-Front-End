@@ -7,7 +7,6 @@ import { Footer } from "./components/Footer";
 import { Search } from "./components/Search";
 import './App.css';
 import { UserList } from "./components/UserList";
-import { UserCreate } from './components/UserCreate';
 
 function App() {
     const [users, setUsers] = useState([]);
@@ -20,35 +19,39 @@ function App() {
             });
     }, []);
 
-
     const onUserCreateSubmit = async (e) => {
-        // 1 stop  form submit
+        // stop automatic form submit
         e.preventDefault();
+
+        // Take form data from DOM tree 
         const formData = new FormData(e.currentTarget);
+        const data = Object.fromEntries(formData);
 
-        // take form data from DOM
-        const data = Object.fromEntries(formData)
+        // Send ajax request to server
+        const createdUser = await userService.create(data);
 
-        //send AJAX request to server
-        const createdUser = await userService.create(data)
-        setUsers(state => [...state, createdUser])
-        //if success add new user
+        // If successfull add new user to the state
+        setUsers(state => [...state, createdUser]);
+    };
 
+    const onUserUpdateSubmit = async (e, userId) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.currentTarget);
+        const data = Object.fromEntries(formData);
+
+        const updatedUser = await userService.update(userId, data);
+
+        setUsers(state => state.map(x => x._id === userId ? updatedUser : x));
     }
 
     const onUserDelete = async (userId) => {
-        await userService.remove(userId)
-    }
+        // Delete from server
+        await userService.remove(userId);
 
-    const onUserUpdateSubmit = async (e, userId) => {
-        e.preventDefault()
-
-        const formData = new FormData(e.currentTarget);
-        const data = Object.fromEntries(formData)
-        const updatedUser = await userService.update(userId, data)
-        setUsers(state => state.map(x => x._id === userId ? updatedUser : x))
-
-    }
+        // Delete from state
+        setUsers(state => state.filter(x => x._id !== userId));
+    };
 
     return (
         <>
@@ -58,10 +61,12 @@ function App() {
                 <section className="card users-container">
                     <Search />
 
-                    <UserList users={users}
+                    <UserList
+                        users={users}
                         onUserCreateSubmit={onUserCreateSubmit}
+                        onUserUpdateSubmit={onUserUpdateSubmit}
                         onUserDelete={onUserDelete}
-                        onUserUpdateSubmit={onUserUpdateSubmit} />
+                    />
                 </section>
             </main>
 

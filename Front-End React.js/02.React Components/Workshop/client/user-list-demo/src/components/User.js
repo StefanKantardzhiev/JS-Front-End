@@ -1,4 +1,4 @@
-// import { formatDate } from '../utils/dateUtils';
+import {formatDate} from '../utils/dateUtils';
 
 export const User = ({
     _id,
@@ -7,11 +7,10 @@ export const User = ({
     email,
     imageUrl,
     createdAt,
-    address,
     phoneNumber,
     onInfoClick,
     onDeleteClick,
-    onEditClick
+    onEditClick,
 }) => {
     return (
         <tr>
@@ -22,7 +21,7 @@ export const User = ({
             <td>{lastName}</td>
             <td>{email}</td>
             <td>{phoneNumber}</td>
-            <td>{Date(createdAt).slice(0, 10)}</td>
+            <td>{formatDate(createdAt)}</td>
 
             <td className="actions">
                 <button className="btn edit-btn" title="Edit" onClick={() => onEditClick(_id)}>

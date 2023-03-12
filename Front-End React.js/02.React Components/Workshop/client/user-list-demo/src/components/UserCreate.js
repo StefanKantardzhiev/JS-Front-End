@@ -1,10 +1,10 @@
 export const UserCreate = ({
     user,
-    onUserCreateSubmit,
     onClose,
+    onUserCreateSubmit,
 }) => {
     return (
-        < div className="overlay" >
+        <div className="overlay">
             <div className="backdrop"></div>
             <div className="modal">
                 <div className="user-container">
@@ -19,7 +19,7 @@ export const UserCreate = ({
                             </svg>
                         </button>
                     </header>
-                    <form onSubmit={onUserCreateSubmit}>
+                    <form onSubmit={(e) => onUserCreateSubmit(e, user?._id)}>
                         <div className="form-row">
                             <div className="form-group">
                                 <label htmlFor="firstName">First name</label>
@@ -53,7 +53,7 @@ export const UserCreate = ({
                                 <p className="form-error">Email is not valid!</p>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="phoneNumber" >Phone number</label>
+                                <label htmlFor="phoneNumber">Phone number</label>
                                 <div className="input-wrapper">
                                     <span><i className="fa-solid fa-phone"></i></span>
                                     <input id="phoneNumber" name="phoneNumber" type="text" defaultValue={user?.phoneNumber} />
@@ -118,13 +118,14 @@ export const UserCreate = ({
                         </div>
                         <div id="form-actions">
                             <button id="action-save" className="btn" type="submit">Save</button>
-                            <button id="action-cancel" className="btn" type="button" onClick={onClose}>
+                            <button id="action-cancel" className="btn" type="button">
                                 Cancel
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
-        </div >
-    )
-}
+        </div>
+    );
+};
+
