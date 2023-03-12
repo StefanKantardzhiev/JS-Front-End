@@ -40,6 +40,11 @@ function App() {
         await userService.remove(userId)
     }
 
+    const onUserUpdateSubmit = async (e) => {
+        e.preventDefault()
+
+    }
+
     return (
         <>
             <Header />
@@ -48,8 +53,10 @@ function App() {
                 <section className="card users-container">
                     <Search />
 
-                    <UserList users={users} onUserCreateSubmit={onUserCreateSubmit}
-                        onUserDelete={onUserDelete} />
+                    <UserList users={users}
+                        onUserCreateSubmit={onUserCreateSubmit}
+                        onUserDelete={onUserDelete}
+                        onUserUpdateSubmit={onUserUpdateSubmit} />
 
 
                 </section>

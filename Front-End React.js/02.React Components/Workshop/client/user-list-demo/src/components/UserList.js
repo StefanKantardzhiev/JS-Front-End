@@ -9,11 +9,14 @@ import { UserDelete } from './UserDelete';
 export const UserList = ({
     users,
     onUserCreateSubmit,
-    onUserDelete
+    onUserDelete,
+    onUserUpdateSubmit
 }) => {
     const [selectedUser, setSelectedUser] = useState(null);
-    const [showDeleteUser, setShowDeleteUser] = useState(false)
+    const [showDeleteUser, setShowDeleteUser] = useState(false);
     const [showAddUser, setShowAddUser] = useState(false);
+    const [showEditUser, setShowEditUser] = useState(null);
+    const [deleteUserId, setDeleteUserId] = useState(null);
     const onInfoClick = async (userId) => {
         const user = await userService.getOne(userId);
 
@@ -23,7 +26,7 @@ export const UserList = ({
     const onClose = () => {
         setSelectedUser(null);
         setShowAddUser(false)
-        setShowDeleteUser(false)
+        setShowDeleteUser(null)
     };
 
     const onUserAddClick = () => {
@@ -36,8 +39,18 @@ export const UserList = ({
     }
 
     const onDeleteClick = (userId) => {
-        setSelectedUser({ _id: userId });
-        setShowDeleteUser(true)
+        setShowDeleteUser(userId)
+    }
+
+    const onUserDeleteHandler = () => {
+        onUserDelete(showDeleteUser)
+        onClose()
+    }
+    const onEditClick = async (userId) => {
+        const user = await userService.getOne(userId);
+
+        setShowEditUser(user)
+
     }
 
 
@@ -47,7 +60,8 @@ export const UserList = ({
         <>
             {selectedUser && <UserDetails {...selectedUser} onClose={onClose} />}
             {showAddUser && <UserCreate onClose={onClose} onUserCreateSubmit={onUserCreateSubmitHandler} />}
-            {showDeleteUser && <UserDelete onClose={onClose} onDelete={() => onUserDelete(setSelectedUser.userId)} />}
+            {showDeleteUser && <UserDelete onClose={onClose} onDelete={onUserDeleteHandler} />}
+            {showEditUser && <UserCreate onClose={onClose} onUserCreateSubmit={onUserUpdateSubmit} />}
             <div className="table-wrapper">
                 {/* <div className="loading-shade">
                 <div className="spinner"></div>
@@ -167,7 +181,8 @@ export const UserList = ({
                         {users.map(u => <User key={u._id}
                             {...u}
                             onInfoClick={onInfoClick}
-                            onDeleteClick={onDeleteClick} />)}
+                            onDeleteClick={onDeleteClick}
+                            onEditClick={onEditClick} />)}
                     </tbody>
                 </table>
             </div>
