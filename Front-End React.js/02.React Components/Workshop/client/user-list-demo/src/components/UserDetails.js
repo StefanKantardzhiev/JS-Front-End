@@ -43,8 +43,8 @@ export const UserDetails = ({
                                 <strong> {`${address.country}, ${address.city}, ${address.street} ${address.streetNumber}`}</strong>
                             </p>
 
-                            <p>Created on: <strong>{Date(createdAt)}</strong></p>
-                            <p>Modified on: <strong>{Date(updatedAt)}</strong></p>
+                            <p>Created on: <strong>{Date(createdAt).slice(0,10)}</strong></p>
+                            <p>Modified on: <strong>{Date(updatedAt).slice(0,10)}</strong></p>
                         </div>
                     </div>
                 </div>
