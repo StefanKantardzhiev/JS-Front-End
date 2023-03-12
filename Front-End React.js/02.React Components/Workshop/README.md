@@ -4,6 +4,7 @@ Includes:
 Create User
 Remove  User 
 Edit  User
+View Info 
 
 Server : MongoDB => http://localhost:3005/
 
