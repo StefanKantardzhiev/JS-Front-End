@@ -90,15 +90,15 @@ function App() {
                         <textarea name="bio" id="bio" cols="30" rows="10" value={values.bio} onChange={onChangeHandler}></textarea>
                     </div>
                     <div>
-                        <label htmlFor="hiking">hiking</label>
+                        <label htmlFor="hiking">Hiking</label>
                         <input type="checkbox" name="hobbies" value="hiking" id="hiking" onChange={onHobbiesChange} checked={hobbies['hiking'] || false} />
-                        <label htmlFor="reading">reading</label>
+                        <label htmlFor="reading">Reading</label>
                         <input type="checkbox" name="hobbies" value="reading" id="reading" onChange={onHobbiesChange} checked={hobbies['reading'] || false} />
-                        <label htmlFor="sports">sports</label>
+                        <label htmlFor="sports">Sports</label>
                         <input type="checkbox" name="hobbies" value="sports" id="sports" onChange={onHobbiesChange} checked={hobbies['sports'] || false} />
-                        <label htmlFor="gaming">gaming</label>
+                        <label htmlFor="gaming">Gaming</label>
                         <input type="checkbox" name="hobbies" value="gaming" id="gaming" onChange={onHobbiesChange} checked={hobbies['gaming'] || false} />
-                        <label htmlFor="coding">coding</label>
+                        <label htmlFor="coding">Coding</label>
                         <input type="checkbox" name="hobbies" value="coding" id="coding" onChange={onHobbiesChange} checked={hobbies['coding'] || false} />
                     </div>
 
