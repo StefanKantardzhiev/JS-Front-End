@@ -9,7 +9,7 @@ function App() {
     const [gender, setGender] = useState('male');
     const [bio, setBio] = useState('');
     const [age, setAge] = useState();
-    const [hobbies, setHobbies] = useState({});
+    const [hobbies, setHobbies] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -29,17 +29,9 @@ function App() {
         setAge(Number(e.target.value));
     };
 
-    const onCreditCardChange = (e) => {
-        setCreditCard(e.target.value);
-    };
-
-    const onOccupationChange = (e) => {
-        setOccupation(e.target.value)
-    };
-
-    const onGenderChange = (e) => {
-        setGender(e.target.value);
-    };
+    const onChangeHandler = (e) =>{
+        e.preventDefault()
+    } 
 
     const onBioChange = (e) => {
         setBio(e.target.value);
@@ -63,7 +55,7 @@ function App() {
                             name="username"
                             id="username"
                             value={username}
-                            onChange={onUsernameChange}
+                            onChange={onChangeHandler}
                         />
                     </div>
 
@@ -86,14 +78,14 @@ function App() {
                                 name="creditCard"
                                 id="credit-card"
                                 value={creditCard}
-                                onChange={onCreditCardChange}
+                                onChange={onChangeHandler}
                             />
                         </div>
                     )}
 
                     <div>
                         <label htmlFor="occupation">Occupation</label>
-                        <select name="occupation" id="occupation" value={occupation} onChange={onOccupationChange}>
+                        <select name="occupation" id="occupation" value={occupation} onChange={onChangeHandler}>
                             <option value="it">IT</option>
                             <option value="engineering">Engineering</option>
                             <option value="medicine">Medicine</option>
@@ -102,14 +94,14 @@ function App() {
 
                     <div>
                         <label htmlFor="male">Male</label>
-                        <input type="radio" name="gender" id="male" value="male" onChange={onGenderChange} checked={gender === 'male'}/>
+                        <input type="radio" name="gender" id="male" value="male" onChange={onChangeHandler} checked={gender === 'male'}/>
                         <label htmlFor="female">Female</label>
-                        <input type="radio" name="gender" id="female" value="female" onChange={onGenderChange} checked={gender === 'female'}/>
+                        <input type="radio" name="gender" id="female" value="female" onChange={onChangeHandler} checked={gender === 'female'}/>
                     </div>
 
                     <div>
                         <label htmlFor="bio">Bio</label>
-                        <textarea name="bio" id="bio" cols="30" rows="10" value={bio} onChange={onBioChange}></textarea>
+                        <textarea name="bio" id="bio" cols="30" rows="10" value={bio} onChange={onHobbiesChange}></textarea>
                     </div>
                     <div>
                         <label htmlFor="hiking">hiking</label>
