@@ -16,7 +16,7 @@ function App() {
       <Header />
       {/* <Login />
       <Register /> */}
-      {/* <Home /> */}
+      <Home />
       {/* <Create /> */}
       {/* <Catalog /> */}
     </div>
