@@ -7,7 +7,7 @@ export const Catalog = () => {
                     <img src="./images/avatar-1.jpg" />
                     <h6>Action</h6>
                     <h2>Cover Fire</h2>
-                    <a href="#" className="details-button">Details</a>
+                    <a href="/" className="details-button">Details</a>
                 </div>
 
             </div>
@@ -16,7 +16,7 @@ export const Catalog = () => {
                     <img src="./images/avatar-1.jpg" />
                     <h6>Action</h6>
                     <h2>Zombie lang</h2>
-                    <a href="#" className="details-button">Details</a>
+                    <a href="/" className="details-button">Details</a>
                 </div>
 
             </div>
@@ -25,7 +25,7 @@ export const Catalog = () => {
                     <img src="./images/avatar-1.jpg" />
                     <h6>Action</h6>
                     <h2>MineCraft</h2>
-                    <a href="#" className="details-button">Details</a>
+                    <a href="/" className="details-button">Details</a>
                 </div>
             </div>
         </section>

@@ -1,7 +1,6 @@
 export const Home = () => {
     return (
         <section id="welcome-world">
-
             <div className="welcome-message">
                 <h2>ALL new games are</h2>
                 <h3>Only in GamesPlay</h3>
@@ -24,7 +23,7 @@ export const Home = () => {
                         <a href="#" className="btn details-btn">Details</a>
                     </div>
                 </div>
-                <div className="game">
+                {/* <div className="game">
                     <div className="image-wrap">
                         <img src="./images/ZombieLang.png" />
                     </div>
@@ -47,10 +46,10 @@ export const Home = () => {
                     <div className="data-buttons">
                         <a href="#" className="btn details-btn">Details</a>
                     </div>
-                </div>
+                </div> */}
 
                 {/* <!-- Display paragraph: If there is no games  --> */}
-                <p className="no-articles">No games yet</p>
+                {/* <p className="no-articles">No games yet</p> */}
             </div>
         </section>
     )

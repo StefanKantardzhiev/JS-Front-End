@@ -1,5 +1,7 @@
 export const Register = () => {
-    return (<section id="register-page" className="content auth">
+    return (
+    
+    <section id="register-page" className="content auth">
         <form id="register">
             <div className="container">
                 <div className="brand-logo"></div>
@@ -17,7 +19,7 @@ export const Register = () => {
                 <input className="btn submit" type="submit" value="Register" />
 
                 <p className="field">
-                    <span>If you already have profile click <a href="#">here</a></span>
+                    <span>If you already have profile click <a href="/login">here</a></span>
                 </p>
             </div>
         </form>
