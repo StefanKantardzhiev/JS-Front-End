@@ -17,7 +17,7 @@ import { Details } from './components/Catalog/Details';
 
 
 function App() {
-  const navigate = useNavigate
+  const navigate = useNavigate()
   const [games, setGames] = useState([]);
   const [currentGame,setCurrentGame]= useState([])
   useEffect(() => {
