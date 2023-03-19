@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import { Fragment } from 'react'
 import * as gameService from './services/gameService'
 
 
@@ -19,7 +17,6 @@ import { Details } from './components/Catalog/Details';
 function App() {
   const navigate = useNavigate()
   const [games, setGames] = useState([]);
-  const [currentGame,setCurrentGame]= useState([])
   useEffect(() => {
     gameService.getAll()
       .then(result => {
@@ -29,8 +26,8 @@ function App() {
 
   const onCreateGameSubmit = async (data) => {
     const newGame = await gameService.create(data)
-    // return newGame
     navigate('/catalog')
+    return newGame
   }
 
 
