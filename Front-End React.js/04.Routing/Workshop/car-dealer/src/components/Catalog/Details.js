@@ -2,17 +2,34 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router"
 
 import * as gameService from '../../services/gameService'
-
+import * as commentService from '../../services/commentService'
 export const Details = () => {
     const { gameId } = useParams();
-
+    const [username, setUsername] = useState('')
+    const [comment, setComment] = useState('')
     const [game, setGame] = useState({})
+
+
+
+
     useEffect(() => {
         gameService.getOne(gameId)
             .then(result => {
                 setGame(result)
             })
     }, [gameId])
+
+
+    const onCommentSubmit = async (e) => {
+        e.preventDefault();
+        await commentService.create({
+            gameId,
+            username,
+            comment
+        })
+        setComment('')
+        setUsername('')
+    }
 
 
     return (
@@ -28,7 +45,7 @@ export const Details = () => {
                 </div>
 
                 <p className="text">
-                   {game.summary}
+                    {game.summary}
                 </p>
 
                 <div className="details-comments">
@@ -57,8 +74,9 @@ export const Details = () => {
             {/* <!-- Add Comment ( Only for logged-in users, which is not creators of the current game ) --> */}
             <article className="create-comment">
                 <label>Add new comment:</label>
-                <form className="form">
-                    <textarea name="comment" placeholder="Comment......"></textarea>
+                <form className="form" onSubmit={onCommentSubmit}>
+                    <input type='text' name='username' placeholder="Peter" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <textarea name="comment" placeholder="Comment......" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
                     <input className="btn submit" type="submit" value="Add Comment" />
                 </form>
             </article>
