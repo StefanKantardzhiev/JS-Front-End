@@ -2,15 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router"
 
 import * as gameService from '../../services/gameService'
-import * as commentService from '../../services/commentService'
 export const Details = () => {
     const { gameId } = useParams();
     const [username, setUsername] = useState('')
-    const [comment, setComment] = useState('')
     const [game, setGame] = useState({})
-
-
-
+    const [comment, setComment] = useState('')
 
     useEffect(() => {
         gameService.getOne(gameId)
@@ -22,13 +18,13 @@ export const Details = () => {
 
     const onCommentSubmit = async (e) => {
         e.preventDefault();
-        await commentService.create({
-            gameId,
+        const result = await gameService.addComment(gameId, {
             username,
             comment
         })
         setComment('')
         setUsername('')
+        setGame(state => ({ ...state, comments: { ...state.comments, [result._id]: result } }));
     }
 
 
@@ -52,15 +48,18 @@ export const Details = () => {
                     <h2>Comments:</h2>
                     <ul>
                         {/* <!-- list all comments for current game (If any) --> */}
-                        <li className="comment">
-                            <p>Content: I rate this one quite highly.</p>
-                        </li>
-                        <li className="comment">
-                            <p>Content: The best game.</p>
-                        </li>
+                        {game.comments && Object.values(game.comments).map(x => (
+                            <li key={x._id} className="comment">
+                                <p>{x.username} : {x.comment}</p>
+                            </li>
+                        ))}
                     </ul>
+
+                    {/* {(game.comments === null)(
+                        <p className="no-comment">No comments.</p>
+                    )} */}
                     {/* <!-- Display paragraph: If there are no games in the database --> */}
-                    <p className="no-comment">No comments.</p>
+
                 </div>
 
                 {/* <!-- Edit/Delete buttons ( Only for creator of this game )  --> */}

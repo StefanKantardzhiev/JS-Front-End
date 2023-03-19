@@ -1,7 +1,7 @@
 import * as request from "./requester"
 
 
-export const baseUrl = 'http://127.0.0.1:3030/jsonstore/games'
+const baseUrl = 'http://127.0.0.1:3030/jsonstore/games'
 
 export const getAll = async () => {
     const result = await request.get(baseUrl)
@@ -17,5 +17,11 @@ export const create = async (gameData) => {
 
 export const getOne = async (gameId) => {
     const result = await request.get(`${baseUrl}/${gameId}`)
+    return result
+}
+
+export const addComment = async (gameId, data) => {
+    const result = await request.post(`${baseUrl}/${gameId}/comments`, data)
+
     return result
 }
