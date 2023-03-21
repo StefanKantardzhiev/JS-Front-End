@@ -1,7 +1,7 @@
 import './App.css';
 import * as gameService from './services/gameService'
 import { AuthContext } from './contexts/AuthContext';
-
+import * as authService from './services/authService'
 
 import { Header } from './components/Header';
 import { Home } from './components/Home';
@@ -28,15 +28,14 @@ function App() {
   }, [])
 
   const onCreateGameSubmit = async (data) => {
-    const newGame = await gameService.create(data)
+    await gameService.create(data)
     navigate('/catalog')
-    return newGame
+
   }
 
-  const onLoginSubmit = async (e) => {
-    e.preventDefault();
-    const result = Object.fromEntries(new FormData(e.target));
-    console.log(result);
+  const onLoginSubmit = async (data) => {
+    const result = await authService.login(data)
+    setAuth(result)
   }
 
 
