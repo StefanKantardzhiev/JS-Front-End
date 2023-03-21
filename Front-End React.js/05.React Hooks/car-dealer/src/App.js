@@ -34,8 +34,14 @@ function App() {
   }
 
   const onLoginSubmit = async (data) => {
+    try {
     const result = await authService.login(data)
     setAuth(result)
+    navigate('/catalog')
+    } catch (error) {
+      console.log(error.message)
+    }
+    
   }
 
 

@@ -10,22 +10,19 @@ export const request = async (method, url, data) => {
             options.body = JSON.stringify(data)
         }
     }
-
     const response = await fetch(url, options)
-
-
-
-    if (!response.ok) {
+    if(!response.ok){
         const result = await response.json()
-        throw result
+        throw result;
     }
     try {
         const result = await response.json()
-        return result
+       
+        return result;
+    } catch (error) {
+        return{}
     }
-    catch (error) {
-        return {}
-    }
+
 }
 
 export const get = request.bind(null, 'GET')
