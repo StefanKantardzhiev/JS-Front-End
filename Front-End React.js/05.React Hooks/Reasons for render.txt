@@ -1,6 +1,0 @@
-Reasons for render : 
-
-1.Mount (first render)
-2.Parent re-render - when 1 component re-render + all his children(by default)
-3.Props change
-4.Hooks change (for ex. setChange)
