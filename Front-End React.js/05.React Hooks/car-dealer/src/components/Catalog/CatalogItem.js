@@ -10,7 +10,7 @@ export const CatalogItem = ({
     return (
         <div className="allGames">
             <div className="allGames-info">
-                <img src={imageUrl} />
+                <img src={imageUrl} alt="alt-img" />
                 <h6>{category}</h6>
                 <h2>{title}</h2>
 

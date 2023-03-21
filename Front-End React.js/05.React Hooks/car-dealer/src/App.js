@@ -1,6 +1,6 @@
 import './App.css';
 import * as gameService from './services/gameService'
-
+import { AuthContext } from './contexts/AuthContext';
 
 
 import { Header } from './components/Header';
@@ -17,6 +17,9 @@ import { Details } from './components/Catalog/Details';
 function App() {
   const navigate = useNavigate()
   const [games, setGames] = useState([]);
+  const [auth, setAuth] = useState({});
+
+
   useEffect(() => {
     gameService.getAll()
       .then(result => {
@@ -30,23 +33,31 @@ function App() {
     return newGame
   }
 
+  const onLoginSubmit = async (e) => {
+    e.preventDefault();
+    const result = Object.fromEntries(new FormData(e.target));
+    console.log(result);
+  }
+
 
 
   return (
-    <div id='box'>
-      <Header />
-      <main id='main-content'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/catalog' element={<Catalog games={games} />} />
-          <Route path='/catalog/:gameId/' element={<Details />} />
-          <Route path='/create' element={<Create onCreateGameSubmit={onCreateGameSubmit} />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
-      </main>
-    </div>
+    <AuthContext.Provider value={{ onLoginSubmit }}>
+      <div id='box'>
 
+        <Header />
+        <main id='main-content'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login onLoginSubmit={onLoginSubmit} />} />
+            <Route path='/catalog' element={<Catalog games={games} />} />
+            <Route path='/catalog/:gameId/' element={<Details />} />
+            <Route path='/create' element={<Create onCreateGameSubmit={onCreateGameSubmit} />} />
+            <Route path='/register' element={<Register />} />
+          </Routes>
+        </main>
+      </div>
+    </AuthContext.Provider>
   );
 }
 

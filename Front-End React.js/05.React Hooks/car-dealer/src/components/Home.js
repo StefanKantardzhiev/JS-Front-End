@@ -13,7 +13,7 @@ export const Home = () => {
                 {/* <!-- Display div: with information about every game (if any) --> */}
                 <div className="game">
                     <div className="image-wrap">
-                        <img src="car-dealer\src\images\CoverFire.png" />
+                        <img src="/" alt="img-alt"/>
                     </div>
                     <h3>Cover Fire</h3>
                     <div className="rating">
