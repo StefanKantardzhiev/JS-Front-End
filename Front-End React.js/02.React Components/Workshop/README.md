@@ -6,6 +6,6 @@ Remove  User
 Edit  User
 View Info 
 
-Server : MongoDB => http://localhost:3005/
+
 
 ![Screenshot_1](https://user-images.githubusercontent.com/103639205/224543003-bbf89358-29a4-4cf6-9dcb-02e704afa188.png)
