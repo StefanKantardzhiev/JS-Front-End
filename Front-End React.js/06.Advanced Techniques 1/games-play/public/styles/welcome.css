@@ -57,7 +57,7 @@
 }
 
 #welcome-world>#home-page {
-    width: 50% fit-content;
+    width: relatic;
     margin: auto;
     text-align: center;
 }
