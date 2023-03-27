@@ -62,7 +62,7 @@ export const AuthProvider = ({
     return (
         <>
             <AuthContext.Provider value={contextValues}>
-               {children} {/* {children} <-- everything in APP under  AuthProvider*/}
+               {children} {/* {children} <-- everything in APP.js under  AuthProvider*/}
             </AuthContext.Provider>
         </>
     );
